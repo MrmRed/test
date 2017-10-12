@@ -1,7 +1,20 @@
-import { combineReducers } from 'redux';
 
-const rootReducer = combineReducers({
-  state: (state = {}) => state
-});
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-export default rootReducer;
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+
+import App from './components/app';
+import reducers from './reducers';
+
+import ReduxPromise from 'redux-promise';
+
+const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
+
+ReactDOM.render(
+  <Provider store={}>
+    <App />
+  </Provider>,
+  document.querySelector(".container"));
+
