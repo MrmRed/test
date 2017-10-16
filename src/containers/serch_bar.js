@@ -15,7 +15,7 @@ class SearchBar extends Component{
     onInputChange(e){
         this.setState({term : e.target.value});
     }
-    onInputChangeC(c){
+    onInputChangeC(e){
         this.setState({country : e.target.value});
     }
     onFormSubmit(e){
