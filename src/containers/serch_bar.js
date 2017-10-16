@@ -6,7 +6,7 @@ import { fetchWeather } from '../actions/index';
 class SearchBar extends Component{
     constructor(props){
         super(props);
-        this.state = {term : '', country : ''};
+        this.state = {term : '', country: ''};
 
         this.onInputChange = this.onInputChange.bind(this);
         this.onInputChangeC = this.onInputChangeC.bind(this);
@@ -15,13 +15,13 @@ class SearchBar extends Component{
     onInputChange(e){
         this.setState({term : e.target.value});
     }
-    onInputChangeC(e){
+    onInputChangeC(c){
         this.setState({country : e.target.value});
     }
     onFormSubmit(e){
         e.preventDefault();
         this.props.fetchWeather(this.state.term, this.state.country);
-        this.setState({term: '', country : ''});
+        this.setState({term: '', country: ''});
     }
 
     render(){
