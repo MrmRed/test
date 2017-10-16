@@ -3,7 +3,7 @@ import React from 'react';
 import { Sparklines, SparklinesLine, SparklinesReferenceLines } from 'react-sparklines';
 
 function average(data){
-    return _.round(_.sum(data)/data.lenght);
+    return _.round(_.sum(data)/data.length);
 }
 
 export default( props ) => {
